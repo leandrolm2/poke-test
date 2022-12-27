@@ -1,17 +1,17 @@
-import React from 'react';
-import './App.css';
-import Props from './types/pokemons'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 
+import Pokedex from "./pages"
+import Details from "./pages/details"
 
-const pokedex: React.FC<Props> = ({ pokemon }) => {
+const App: React.FC = () => {
+
   return (
-    <div>
-      <h1>{pokemon.name}</h1>
-      <p>{pokemon.type}</p>
-      <img src={pokemon.imageUrl} alt={pokemon.name} />
-    </div>
-  )
-}
+    <Routes>
+      <Route path="/" element={<Pokedex />} />
+      <Route path="/details/:id" element={<Details />} />
+    </Routes>
+  );
+};
 
-
-export default pokedex;
+export default App;
