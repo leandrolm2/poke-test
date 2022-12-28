@@ -10,7 +10,6 @@ const Details = () => {
 
   const findPokemon = async (): Promise<void> => {
     const data = await getPokemonDetail(indexPokemon!);
-    console.log(data);
 
     data.image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${indexPokemon}.png `;
 
@@ -22,10 +21,10 @@ const Details = () => {
   }, []);
 
   if (!pokeDetails) return <h1>Loading...</h1>;
-
+  console.log(pokeDetails)
   return (
-    <div>
-      <div>
+    <div className="bg-zinc-400 100vh min-h-screen">
+      <div className="flex justify-items-center flex-col items-center	m-10 rounded shadow bg-lime-200	p-5">
         <h1>
           Detalhes {pokeDetails.name} - {indexPokemon}
         </h1>
