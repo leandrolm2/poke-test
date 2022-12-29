@@ -23,10 +23,10 @@ const Details = () => {
   if (!pokeDetails) return <h1>Loading...</h1>;
   console.log(pokeDetails)
   return (
-    <div className="bg-zinc-400 100vh min-h-screen">
-      <div className="flex justify-items-center flex-col items-center	m-10 rounded shadow bg-lime-200	p-5">
+    <div className="bg-zinc-400 100vh min-h-screen flex flex-col justify-center items-center">
+      <div className="flex justify-items-center flex-col items-center	m-auto rounded shadow bg-lime-200	p-5">
         <h1>
-          Detalhes {pokeDetails.name} - {indexPokemon}
+          {pokeDetails.name} - {indexPokemon}
         </h1>
 
         <img src={pokeDetails.image} alt="no content" />

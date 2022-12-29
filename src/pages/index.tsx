@@ -30,8 +30,8 @@ const Pokedex: React.FC = () => {
   return (
     <div className="bg-zinc-400 100vh min-h-screen">
       <div className="flex items-center flex-col">
-        <div className= "flex items-center flex-col w-full bg-zinc-900">
-          <h1 className="text-3xl font-bold text-red-600">Pokemon API</h1>
+        <div className= "h-24 flex items-center flex-col w-full bg-zinc-900">
+          <h1 className="mt-6 text-3xl font-bold text-red-600">Pokemon API</h1>
         </div>
 
         <div>
